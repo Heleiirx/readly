@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Box, SwipeableDrawer, useMediaQuery, Typography } from '@mui/material';
-import { useTheme } from '@mui/system';
+import { maxHeight, maxWidth, Stack, useTheme, width } from '@mui/system';
 import { useDrawer } from '../contexts/drawerContext';
+import logo192 from '../logo192.png';
 
 export default function DrawerResponsive() {
   const theme = useTheme();
@@ -17,19 +18,24 @@ export default function DrawerResponsive() {
         onClose={closeDrawer} // Cierra el drawer
         onOpen={()=>{}} // Abre el drawer (necesario para SwipeableDrawer)
       >
-        <img src='' alt='' ></img>
         <Box
           sx={{
             width: isSmallScreen ? '100%' : 500, 
             height: isSmallScreen ? 800 : '100%',
-            p: 2,
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center'
           }}
           role="presentation"
         >
-          <Typography variant="h6">Contenido del Swipeable Side Peek</Typography>
-          <Typography variant="body1">
-            Aquí puedes agregar contenido interactivo con soporte para gestos.
-          </Typography>
+            <Stack direction={'column'} alignItems={'center'} spacing={1} padding={2}>
+                <img src={logo192} alt='Logo'></img>
+                <Typography variant="h4">Titulo Libro</Typography>
+                <Typography variant="h6">Autor</Typography>
+                <Typography variant="body1">
+                Descripcion del libro
+                </Typography>
+            </Stack>
         </Box>
       </SwipeableDrawer>
     </Box>

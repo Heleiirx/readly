@@ -9,7 +9,7 @@ import { DrawerProvider } from '../contexts/drawerContext';
 export default function Search() {
 
   return (
-    <Box sx={{ flexGrow: 1 }} justifyContent={'center'}>
+    <Box sx={{ flexGrow: 1, padding:2}} justifyContent={'center'}>
       <DrawerProvider>
         <Grid container spacing={2} justifyContent={'center'}
           sx={{
