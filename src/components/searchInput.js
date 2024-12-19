@@ -9,7 +9,7 @@ export default function SearchInput(){
             <IconButton>
                 <FaSearch/>
             </IconButton>
-            <TextField id="standard-search" label="Search field" type="search" />
+            <TextField id="standard-search" label="Search field" type="search" sx={{ width: {sm:'100%', md:500} }} color='secondary'/>
         </Stack>
     )
 }
